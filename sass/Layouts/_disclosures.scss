@@ -1,0 +1,116 @@
+// Trước khi nhấn button
+.disclosures {
+    .disclosures__heading {
+        h2 {
+            padding: $pd-5 + 5 $pd-4;
+            margin-bottom: 0;
+            button {
+                transition: all 0.2s;
+                padding: 10px 6px;
+                width: 100%;
+                background-color: transparent;
+                border: 1px solid transparent;
+                border-radius: 0;
+                @include styleText($color-blue-0, $fs-0, $fw-normal);
+                text-transform: uppercase;
+                span {
+                    vertical-align: center;
+                    padding-right: $pd-1;
+
+                }
+                i {
+                    transition: all 0.2s;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+    .disclosures__content {
+        background-color: $color-gray-2;
+        max-height: 0;
+        width: 100%;
+        overflow: hidden;
+        font-size: 14px;
+        margin-bottom: $mg-2;
+        transition: all 0.2s ease-in;
+        .disclosures__text {
+            @include styleText($color-black-0, $fs-1, $fw-normal);
+            padding: 40px 95px;
+            list-style: none;
+            a {
+                color: $color-blue-0;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        &::-webkit-scrollbar {
+            height: 10px;
+            overflow: hidden;
+            width: 1.1rem;
+        }
+        &::-webkit-scrollbar-thumb {
+            width: 1.1rem;
+            background-color: $color-blue-0;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #ccc;
+            width: 1.1rem;
+        }
+    }
+}
+
+// Sau khi nhấn button
+.disclosures.open {
+    .disclosures__heading {
+        h2 {
+            button {
+                i {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+    }
+    .disclosures__content {
+        max-height: 240px;
+        overflow-y: scroll;
+    }
+}
+
+// Reponsive
+.disclosures {
+    @include responsive("super-large") {
+        .disclosures__content {
+            .disclosures__text {
+                padding-left: 45px;
+                padding-right: 45px;
+            }
+        }
+    }
+    @include responsive("large") {
+        .disclosures__content {
+            .disclosures__text {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    }
+    @include responsive("medium") {
+        .disclosures__content {
+            .disclosures__text {
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+        }
+    }
+    @include responsive("very-small") {
+        .disclosures__content {
+            .disclosures__text {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+}

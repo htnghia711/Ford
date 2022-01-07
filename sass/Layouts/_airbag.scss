@@ -1,0 +1,11 @@
+.airbag {
+    background-color: $color-gray-2;
+    .airbag__content {
+        text-align: center;
+        padding-top: $pd-4;
+        padding-bottom: $pd-5;
+        h2 {
+            color: $color-red-0;
+        }
+    }
+}

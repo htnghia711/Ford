@@ -1,0 +1,87 @@
+.opinion__open {
+    cursor: pointer;
+}
+.opinion__modal {
+    width: 80%;
+    max-height: 90%;
+    max-width: 500px;
+    margin: auto;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001; /* Sit on top */
+    overflow: scroll;
+    .opinion__content {
+        .opinion__header {
+            position: relative;
+            .opinion__close {
+                position: absolute;
+                top: 2px;
+                right: 15px;
+                cursor: pointer;
+                @include styleText($color-white-0, $fs-0, $fw-normal);
+            }
+            img {
+                background-color: $color-black-2;
+            }
+        }
+        .opinion__body {
+            background-color: $color-white-0;
+            box-shadow: rgb(204, 204, 204) 0px 0px 0px 1px inset;
+            text-align: center;
+            padding: 30px 50px 20px;
+            p {
+                margin: 0;
+                padding: 20px 0;
+                @include styleText(#000000, 18px, $fw-normal);
+            }
+            .navbar-nav {
+                a {
+                    display: block;
+                    margin-bottom: 20px;
+                    padding: 12px 0 13px;
+                    @include styleText($color-blue-0, $fs-3 - 3, $fw-normal);
+                }
+            }
+            .opinion__footer {
+                display: flex;
+                justify-content: center;
+                align-self: center;
+                border-top: 0.8px solid #cccccc;
+                margin-top: 10px;
+                padding-top: 20px;
+                img {
+                    width: 120px;
+                }
+            }
+        }
+    }
+}
+
+.opinion__modal {
+    @include responsive("large") {
+        .opinion__content {
+            .opinion__body {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    }
+    @include responsive("very-small") {
+        .opinion__content {
+            .opinion__body {
+                padding: 15px;
+                p {
+                    padding: 10px 0;
+                }
+                .navbar-nav {
+                    a {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

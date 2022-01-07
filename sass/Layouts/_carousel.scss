@@ -1,0 +1,158 @@
+#fordCarousel {
+    .carousel-indicators {
+        li {
+            width: 8px;
+            height: 8px;
+            background-color: $color-white-0;
+            border-radius: 50%;
+            margin: 1px 12px;
+            border: 1px solid $color-white-0;
+            opacity: 1;
+            transition: all 0.5s;
+        }
+        li.active {
+            background-color: transparent;
+            transform: scale(1.5, 1.5);
+        }
+    }
+    .carousel-control-prev {
+        z-index: 1000;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 55px;
+        height: 65px;
+        background-color: rgba(85, 85, 85, 0.8);
+        border: 1px solid transparent;
+        opacity: 1;
+        transition: all 0.3s;
+        span {
+            font-size: 42px;
+        }
+    }
+    .carousel-control-prev:hover {
+        background-color: $color-white-0;
+        border: 1px solid $color-blue-0;
+        border-left: 0;
+        color: $color-blue-0;
+    }
+    .carousel-control-next {
+        z-index: 1000;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 55px;
+        height: 65px;
+        background-color: rgba(85, 85, 85, 0.8);
+        opacity: 1;
+        span {
+            font-size: 42px;
+        }
+    }
+    .carousel-control-next:hover {
+        background-color: $color-white-0;
+        border: 1px solid $color-blue-0;
+        border-right: 0;
+        color: $color-blue-0;
+    }
+    .carousel-item {
+        .carousel-caption {
+            top: 40px;
+            bottom: 50px;
+            left: 0;
+            right: 0;
+            display: block;
+            width: 100%;
+            padding: 0 95px;
+            text-align: left;
+            a {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100%;
+                h2 {
+                    @include styleText($color-white-0, $fs-4, $fw-normal);
+                }
+                p {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    @include styleText($color-white-0, $fs-2, $fw-normal);
+                }
+                .text {
+                    display: block;
+                    padding: 20px 0;
+                    @include styleText($color-white-0, $fs-0, $fw-normal);
+                    i {
+                        font-size: $fs-1;
+                        display: inline-block;
+                        width: 25px;
+                        height: 25px;
+                        line-height: 23px;
+                        border-radius: 50%;
+                        border: 1px solid $color-white-0;
+                        text-align: center;
+                        margin-left: 10px;
+                    }
+                }
+                &:hover {
+                    .whiteBtn {
+                        @include styleHoverButton($color-white-0, $color-blue-2, $color-blue-2);
+                    }
+                    .text {
+                        i {
+                            background-color: $color-white-0;
+                            color: $color-gray-1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#fordCarousel {
+    @include responsive("super-large") {
+        .carousel-item {
+            .carousel-caption {
+                padding-left: 45px;
+                padding-right: 45px;
+            }
+        }
+    }
+    @include responsive("large") {
+        .carousel-item {
+            .carousel-caption {
+                padding-left: 30px;
+                padding-right: 30px;
+                
+            }
+        }
+    }
+    @include responsive("medium") {
+        .carousel-item {
+            .carousel-caption {
+                padding-left: 25px;
+                padding-right: 25px;
+                text-align: center;
+                top: 0;
+            }
+        }
+        .carousel-control-prev, .carousel-control-next{
+            display: none;
+        }
+    }
+    @include responsive("very-small") {
+        .carousel-item {
+            .carousel-caption {
+                padding-left: 15px;
+                padding-right: 15px;
+                .fordCarousel__text {
+                    p {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

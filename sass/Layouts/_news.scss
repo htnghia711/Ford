@@ -1,0 +1,142 @@
+.news {
+    .news__content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        .news__item {
+            overflow: hidden;
+            position: relative;
+            .news__wrap {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                min-height: 20px;
+                background: rgba(6, 120, 188, 0.9);
+                @include styleText($color-white-0, $fs-1, $fw-normal);
+                padding: 4%;
+                padding-right: 35px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                span:first-child {
+                    padding-right: $pd-5;
+                }
+                .news__icon {
+                    display: block;
+                    height: 30px;
+                    width: 30px;
+                    min-width: 30px;
+                    min-height: 30px;
+                    border-radius: 50%;
+                    border: 2px solid $color-white-0;
+                    text-align: center;
+                    line-height: 28px;
+                    font-size: 14px;
+                    transition: all 0.3s;
+                    &:hover {
+                        background-color: $color-white-0;
+                        color: $color-blue-0;
+                    }
+                }
+            }
+            &:hover {
+                .news__img {
+                    img {
+                        transition: all 0.3s;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+        .item1 {
+            grid-column: 1 / span 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            h2 {
+                @include styleText($color-black-0, 30px, $fw-normal);
+                margin-bottom: 0;
+            }
+            p {
+                @include styleText($color-gray-1, $fs-0, $fw-bold);
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+            }
+        }
+        .item3 {
+            grid-column: 1 / span 2;
+            grid-row: 2 / span 2;
+            .news__wrap {
+                @include styleText($color-white-0, $fs-3, $fw-normal);
+                padding: 2%;
+                padding-right: 45px;
+                span:first-child {
+                    padding-right: 35px;
+                }
+                .news__icon {
+                    height: 50px;
+                    width: 50px;
+                    min-height: 50px;
+                    min-width: 50px;
+                    border: 2px solid $color-white-0;
+                    font-size: 25px;
+                    line-height: 47px;
+                }
+            }
+        }
+    }
+    .news__view {
+        text-align: center;
+        padding: 15px 0;
+        cursor: pointer;
+        background: $color-blue-0;
+        @include styleText($color-white-0, $fs-3, $fw-normal);
+        span:first-child {
+            padding-right: $pd-2;
+        }
+    }
+}
+
+.news {
+    @include responsive('medium') {
+        .news__content {
+            display: block;
+            .item1 {
+                h2 {
+                    margin-top: 2rem;
+                    margin-bottom: 1rem;
+                    padding: 3rem 0;
+                }
+                p{
+                    display: none;   
+                }
+            }
+            .news__item {
+                .news__wrap {
+                    font-size: 16px;
+                    padding-top: 4%;
+                    padding-bottom: 4%;
+                    padding-left: $pd-5;
+                    padding-right: $pd-5 + 20;
+                    .news__icon {
+                        height: 30px;
+                        width: 30px;
+                        min-width: 30px;
+                        min-height: 30px;
+                        font-size: 14px;
+                        line-height: 28px;
+                        border: 2px solid $color-white-0;
+                    }
+                }
+            }
+            .mb-hide {
+                display: none;
+            }
+            .mb-show {
+                display: block;
+            }
+        }
+    }
+}

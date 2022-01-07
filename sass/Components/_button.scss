@@ -1,0 +1,42 @@
+.blueBtn {
+    display: inline-block;
+    @include styleText($color-white-0, $fs-0, $fw-normal);
+    @include styleButton($color-blue-0, $color-blue-0, 0, $pd-3, $pd-4);
+    min-height: 50px;
+    width: 270px;
+    margin: 4rem auto 0;
+    transition: all 0.2s;
+}
+
+.blueBtn:hover {
+    @include styleHoverButton($color-white-0, $color-blue-0, $color-blue-0);
+}
+
+.redBtn {
+    display: inline-block;
+    @include styleText($color-white-0, $fs-0, $fw-normal);
+    @include styleButton($color-red-0, $color-red-0, 0, $pd-3, $pd-4);
+    min-height: 50px;
+    width: 270px;
+    margin: 4rem auto 0;
+    transition: all 0.2s;
+}
+
+.redBtn:hover {
+    @include styleHoverButton($color-white-0, $color-red-0, $color-red-0);
+}
+
+.whiteBtn {
+    display: inline-block;
+    @include styleText($color-blue-0, $fs-0, $fw-normal);
+    @include styleButton($color-white-0, $color-blue-0, 0, $pd-3, $pd-4);
+    min-height: 50px;
+    width: 270px;
+    margin: 1rem auto 0;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.whiteBtn:hover {
+    @include styleHoverButton($color-white-0, $color-blue-2, $color-blue-2);
+}

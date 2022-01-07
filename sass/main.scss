@@ -1,0 +1,26 @@
+// Chỉ chứa các đường dẫn đến các file con
+// PHải import theo thứ tự
+// Helper
+@import './Helper/variables';
+@import './Helper/mixin';
+// Vendor (chỉ import file scss của thư viện)
+// Base
+@import './Base/reset';
+@import './Base/normalized';
+// Components
+@import './Components/button';
+@import './Components/heading';
+// Layouts
+@import'./Layouts/header';
+@import './Layouts/carousel';
+@import './Layouts/vehicles';
+@import './Layouts/xmas';
+@import './Layouts/news';
+@import './Layouts/airbag';
+@import './Layouts/disclosures';
+@import './Layouts/banner';
+@import './Layouts/footer';
+@import './Layouts/backtotop';
+@import './Layouts/opinion';
+// Pages
+// Theme

@@ -1,0 +1,50 @@
+// variable color
+$color-black-0: #333333; // default
+$color-black-1: #555555;
+$color-black-2: #242424;
+$color-black-3: #4d4d4d;
+$color-blue-0:#0276B3;
+$color-blue-1:#37A9E8;
+$color-blue-2: #102B4E;
+$color-blue-3: #092A46;
+$color-blue-4:#0276b3;
+$color-gray-0:#A7A7A7;
+$color-gray-1: #626466;
+$color-gray-2: #f7f7f7;
+$color-red-0: #D92E14;
+$color-white-0: #ffffff; //default
+$color-trans:transparent;
+// khung xanh dưới phần news
+// rgba(6,120,188,0.9);
+// variable font-size
+$fs-0: 16px; //default
+$fs-1: 12px;
+$fs-2: 14px;
+$fs-3: 24px;
+$fs-4: 42px;
+//variable margin
+$mg-0: 2px;
+$mg-1: 5px;
+$mg-2: 10px;
+$mg-3: 15px;
+$mg-4: 20px;
+$mg-5: 25px;
+//variable border-radius
+$border-radius: 2px;
+//variable 
+$pd-0: 2px; //default
+$pd-1: 5px; //default
+$pd-2: 10px;
+$pd-3: 15px;
+$pd-4: 20px;
+$pd-5: 25px;
+$pd-6: 45px;
+//variable line-height
+$line-height-0: 1.43; //default
+//variable font-weight
+$fw-normal: normal;
+$fw-bold-0: 600;
+$fw-bold-1: 700;
+$fw-bold: bold;
+//break points
+$breakpoints:( 'super-large': 1440px, 'extra-large': 1200px, 'large': 992px, 'medium': 768px, 'small': 576px, 'very-small': 480px)

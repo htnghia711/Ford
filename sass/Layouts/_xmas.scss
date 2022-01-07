@@ -1,0 +1,102 @@
+.xmas {
+    .xmas__content {
+        position: relative;
+        .xmas__link {
+            position: absolute;
+            top: 40px;
+            bottom: 40px;
+            display: block;
+            width: 100%;
+            padding-left: 95px;
+            padding-right: 95px;
+            .xmas__wrap {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                a {
+                    @include styleText($color-white-0, $fs-0 + 2, $fw-normal);
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    .xmas__wrapct {
+                        position: absolute;
+                        top: 85%;
+                        left: 45%;
+                        padding: 2px;
+                        p {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100%;
+                            margin-top: 8px;
+                            margin-bottom: 0;
+                            padding: $pd-2 $pd-3;
+                            span:first-child {
+                                padding-right: $pd-2;
+                            }
+                            .xmas__icon {
+                                display: inline-block;
+                                text-align: center;
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 50%;
+                                border: 2px solid $color-white-0;
+                                transition: all 0.2s;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    .xmas__icon {
+                        background-color: $color-white-0;
+                        color: rgb(34, 119, 62);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.xmas {
+    @include responsive("super-large") {
+        .xmas__content {
+            .xmas__link {
+                padding-left: 45px;
+                padding-right: 45px;
+            }
+        }
+    }
+    @include responsive("large") {
+        .xmas__content {
+            .xmas__link {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    }
+    @include responsive("medium") {
+        .xmas__content {
+            .xmas__link {
+                padding-left: 25px;
+                padding-right: 25px;
+                .xmas__wrap {
+                    a {
+                        .xmas__wrapct {
+                            top: 85%;
+                            left: 32%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("very-small") {
+        .xmas__content {
+            .xmas__link {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+}
